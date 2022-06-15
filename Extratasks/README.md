@@ -1,7 +1,7 @@
 <img src="https://blog.optimalworkshop.com/wp-content/uploads/2020/06/Understanding-top-tasks.png" alt="task image"> 
 
 
-<h1>This a Documentation for first Extra task.</h1>
+<h1>This is a Documentation for the first Extra task.</h1>
 
 <hr>
 
@@ -9,10 +9,10 @@
 
 
 <h3>Task 1</h3>
-At first I have created yml file which is required for creating jobs
+At first I have created a yml file which is required for creating jobs
 
 <h3>Task 2</h3>
-The first reqiorement was to print all the files and directories in my repository so, git ls-tree --full-tree -r --name-only will work for this
+The first requirement was to print all the files and directories in my repository so, git ls-tree --full-tree -r --name-only will work for this
 
 <h3>Task 3</h3>
 Next task is to print the content of my log file, so very simple with cat command.

@@ -1,3 +1,4 @@
+<img src="https://www.zdnet.com/a/img/2018/04/24/c79e9dfb-b4a9-46bb-b831-f2c57fdf8a1d/cloud-storage.jpg" alt="cloud">
 <h1><b> This is a task 2 mandatory readme for exadel internship </b></h1>
 
 <hr>

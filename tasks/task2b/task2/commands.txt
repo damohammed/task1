@@ -1,0 +1,3 @@
+As I got my billing account for free on Azure, They gave me 200$ for free to use which expires after 30 days of usage, I can use any chargable services up to 200$ untill it expires. After the expiration I can still use the free services untill 750 hourse for most of the services, the hour ammount differs for types of services, butgenerally most of them are 750 hours (12) month.
+
+After that, They advise me to move to pay as you go option or else they will block the account

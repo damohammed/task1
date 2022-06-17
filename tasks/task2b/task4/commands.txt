@@ -1,0 +1,1 @@
+Azure calls EC2 as Virtual Machine, so yes I have tested ssh connection to my virtual machine host and it was successfull. I have used the public static ip for connection which was provided by the service itself, we should make sure that when we are in networking settings of VM, the ip is basic type.

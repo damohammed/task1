@@ -1,0 +1,1 @@
+So I have created two different linux virtual machines with 2 different distributions of ubuntu 20 LTS and debian 11 Bullseye. And all of those stop, restart, delete options were inside virtual machine option, so it was easy. Then I have recreated them again. When I stoped it the vm stopped working and started working after the start option

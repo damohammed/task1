@@ -1,0 +1,7 @@
+I have installed the nginx web-server, it is very simple to use. for debian based: apt install nginx, redhat based: yum install nginx. 
+After that I have opened the ip addres(http://20.5.114.165/) of my VM from browser, and it showed the welcome page, which is located in /var/www/html/index.html
+So I edited that file in html form, with Hello world text, and then echoed out OS information and pasted it there with neofetch command. Then for free space, I used df -h(human readable) and pasted it as well, also for running processes I have echoed the ps aux command and pasted it as well.
+
+My web server and web page was successfully accessible from the public internet 
+
+Then finally I have used the curl command for the last option as curl 20.5.114.165 (my public adress)

@@ -1,0 +1,1 @@
+the ping command and ssh are worked very well and quick from one vm to another machine, I have tried in both of them, no problems were encountered. I have tried with both, ssh-key and password way for authentication.

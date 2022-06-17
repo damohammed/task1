@@ -9,7 +9,8 @@ For task 1, I have created the free acount with my existing microsoft account, a
 
 <h3><b>TASK 2 </b></h3>
 
-After I got my billing, I explored that, Azure provided me 200$ for 30 days as free, I can use any chargable service for this amount and I can use free services as well. But 200$ amount expires after 30 days of usage, then Ican only use the free services for free. Most of free services are provided for 750 hours (12 months) 
+After I got my billing, I explored that, Azure provided me 
+200$ for 30 days as free, I can use any chargable service for this amount and I can use free services as well. But 200$ amount expires after 30 days of usage, then Ican only use the free services for free. Most of free services are provided for 750 hours (12 months) 
 
 <h3><b>TASK 3 </b></h3>
 

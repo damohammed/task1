@@ -17,7 +17,7 @@ Then I have added new rules to ufw(firewall) by adding the public address of ano
 
 <h2>Task 4</h2>
 
-For last step, I have installed apache2 web server by typing: sudo apt install apache2. Then I have edited the index file which is located at /var/www/html/index by redirecting the "hello world" string there as echo "<h1>hello world</h1>" >> /var/www/html/index. 
+For last step, I have installed apache2 web server by typing: sudo apt install apache2. Then I have edited the index file which is located at /var/www/html/index by redirecting the "hello world" string there as echo "hello world" >> /var/www/html/index. 
 After that I have redirected the uname -a, df -h, ps command there again in order to print OS information in index file: 
 uname -a >> /var/www/html/index.html
 df -h >> /var/www/html/index.html

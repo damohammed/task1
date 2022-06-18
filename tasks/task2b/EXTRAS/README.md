@@ -1,4 +1,4 @@
-<img src="https://images.app.goo.gl/UimKsbcLX2n3173f8" alt="extras">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL3hOG-lzmgxhqKmbeIAkaUflnFQECEv1zmDWAiPkv4uZeECewTPoB_pPLCqqA70kRUmk&usqp=CAU" alt="extras">
 
 <h1> This is a folder of two second Extra tasks for exadel internship </h1>
 

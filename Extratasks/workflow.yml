@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+
+  job1:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+      
+      - name: Print the list of files/directories in github repository
+        run: git ls-tree --full-tree -r --name-only HEAD
+        
+      - name: Print content of your log.txt file  
+        run: cat log.txt
+        
+      - name: Print Hello from DEPLOY_VER variable’s content
+        run: echo "hello from";
+             git rev-parse origin/master
+          
+  job2:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+       - name: Contain variable MONTH
+         run: date;
+              YEAR="2012"
+              MONTH="February";
+              DAY_OF_THE_MONTH="12";
+              echo "Day - $DAY_OF_THE_MONTH";
+              echo "Month - $MONTH";
+              echo "Year - $YEAR"
+              
+       - shell: bash
+         env:
+           SUPER_SECRET: ${{ secrets.FAVOURITE_DAY_OF_WEEK }}
+         run: |
+           echo "$SUPER_SECRET"

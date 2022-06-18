@@ -7,17 +7,24 @@
 
 <h3>Task 1</h3>
 
-At first, I have again created two Virtual machines of RHEL and Debian. I have stopped, restarted deleted and then recreated them from the VM menu itself.
+At first, I have again created two Virtual machines of Ubuntu. I have stopped, restarted deleted and then recreated them from the VM menu itself.
 
 <h3>Task 2</h3>
 
-The connection was successfull from my host to VM public ip address
+Then I have added the firewall rules as allow from ip_address
 
 <h3>Task 3</h3>
 
-Then I have added new rules to ufw(firewall) by adding the public address of another vm, as sudo ufw allow from 20.211.181.90 then for another host, I have added previous host's ip the same way. Then I have pinged, response was successfull, then connected via ssh with two virtual machines.
+The connection was successfull from VM1 to VM2 internall address
 
-<h3>Task 4</h3>
+The ip of vm1 is 20.213.164.219;10.0.0.5
+
+The ip of vm2 is 20.211.177.175;10.0.0.6
+
+I have tried the ping command from 20.213.164.219 to 10.0.0.6
+then I have done it reverse
+
+<h3>Task </h3>
 
 For last step, I have installed apache2 web server by typing: sudo apt install apache2. Then I have edited the index file which is located at /var/www/html/index by redirecting the "hello world" string there as echo "hello world" >> /var/www/html/index. 
 After that I have redirected the uname -a, df -h, ps command there again in order to print OS information in index file: 

@@ -9,21 +9,23 @@
 
 At first, I have again created two Virtual machines of Ubuntu.
 
-If you can see on step1 and step2 pictures, It shows the public ip and private ips of their internal networks, as 10.0.0.5 and 10.0.0.6
+Then I have created a new virtual network
+
+For first vm, I used the default vpc, and for second I am using the new one I have created
 
 <h3>Task 2</h3>
 
-Then I have added the firewall rules as allow from ip_address
+Then I allowed peering permissions from virtual network's settings from default to new one
 
 <h3>Task 3</h3>
 
-The connection was successfull from VM1 to VM2 internall address
+The connection was successfull from VM1 to VM2 internall address, default virtual network
 
-The ip of vm1 is 20.213.164.219/10.0.0.5
+The ip of vm1 is 20.70.194.54/30.0.2.4
 
-The ip of vm2 is 20.211.177.175/10.0.0.6
+The ip of vm2 is 20.213.164.219/10.0.0.5
 
-I have tried the ping command from 20.213.164.219 to 10.0.0.6
+I have tried the ping command from 30.0.2.4 to 10.0.0.5
 then I have done it reverse
 
 <hr>

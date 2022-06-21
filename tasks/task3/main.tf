@@ -8,11 +8,14 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "sub_id"
+  subscription_id = "subscription_id"
   features {}
 }
 
-resource "azurerm_resource_group" "terraform-group" {
-  name     = "terra-g"
+resource "azurerm_resource_group" "RG" {
+  name     = "my-terraform"
   location = "Japan East"
+  tags = {
+    Owner = "mukhammad"
+ }
 }

@@ -21,5 +21,15 @@ Then I have added new lines in main.tf script for providing resource of azurerm
 Then I typed terraform validate in order to check wether it is valid.
 
 After it, I typed the command terraform plan in order to perform the actions
+
+After that I have firstly created a virtual network, and all settings inside it.
+
+Then I have created ubuntu vm with standard_b1s size with created vpc.
+
+Then I added a public ip addrress to network.tf then the same ip for vm of ubuntu.
+
+then I typed a command to create them as:
+terraform apply -auto-approve
+
 <hr>
 

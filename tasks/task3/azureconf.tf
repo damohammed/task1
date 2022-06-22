@@ -65,7 +65,9 @@ resource "azurerm_linux_virtual_machine" "vm" {
     version   = "latest"
  
  }
+
 }
+
 #    depends_on = [azurerm_resource_group.RG]
 
 

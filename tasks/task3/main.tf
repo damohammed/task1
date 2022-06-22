@@ -12,14 +12,21 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_virtual_machine_extension" "vmext" {
-   
-   protected_settings = <<PROT
-    {
-        "script": "${base64encode(file(script.sh))}"                 }
-    PROT
-    }
- 
+resource "azurerm_virtual_machine_extension" "vmexter" {
+                              
+      name                  = "vmxt"
+      virtual_machine_id    = azurerm_linux_virtual_machine.vm.id
+      type                  = "CustomScript"
+      type_handler_version  = "2.0"
+      publisher             = "Microsoft.Azure.Extensions"
+
+      settings = <<SETTINGS
+       {
+           "commandToExecute": "sudo apt -y install httpd && sudo systemctl start httpd; sudo apt -y install docker.io; echo '<h1><center>Hello World</center></h1> <h1><center>OS Linux Ubuntu 16LTS</h1></center>' index.html; sudo mv index.nginx-debian.html /var/www/html/" 
+       }
+        SETTINGS
+     }
+
 
 resource "azurerm_resource_group" "RG" {
   name     = "nginx-installer"

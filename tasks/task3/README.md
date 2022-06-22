@@ -44,7 +44,7 @@ and file for centos is centconf.tf
 
 <h2><b>TASK 4</b></h2>
 
-In order to install nginx web server on ubuntu, I have written a bash script file with written scripts of installing nginx then echoing out the hello world string with OS information in html format which will redirect the text to index file, then index file is moved to /var/www/html/ path.
+In order to install nginx web server on ubuntu, I have written a bash script with written scripts of installing nginx then echoing out the hello world string with OS information in html format which will redirect the text to index file, then index file is moved to /var/www/html/ path.
 
 The link is:
 http://20.222.255.95/

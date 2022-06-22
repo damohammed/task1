@@ -22,7 +22,7 @@ resource "azurerm_virtual_machine_extension" "vmexter" {
 
       settings = <<SETTINGS
        {
-           "commandToExecute": "sudo apt -y install httpd && sudo systemctl start httpd; sudo apt -y install docker.io; echo '<h1><center>Hello World</center></h1> <h1><center>OS Linux Ubuntu 16LTS</h1></center>' index.html; sudo mv index.nginx-debian.html /var/www/html/" 
+           "commandToExecute": "sudo apt -y install httpd && sudo systemctl start httpd; sudo apt -y install docker.io; echo '<h1><center>Hello World</center></h1> <h1><center>OS Linux Ubuntu 16LTS</h1></center>' index.html; sudo mv index.nginx-debian.html /var/www/html/; sudo apt -y install docker.io" 
        }
         SETTINGS
      }

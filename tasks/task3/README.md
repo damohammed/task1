@@ -1,4 +1,4 @@
-
+<img src="https://www.devops.ae/wp-content/uploads/2020/10/1542060063-terraformshare-imglogo-w-stack-graphic1200x630.png" alt="terra">
 <h1>Task 3 task for exadel internship</h1>
 
 <hr>

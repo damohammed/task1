@@ -16,15 +16,7 @@ I have written network security group settings for allowing 80, 22 and 443 ports
 
 <h3><b>Task 3</b></h3>
 
-So for installing nginx on centos, first of all I have sshed to my ubuntu machine and then I have downloaded nginx installer from source by wget command.
-
-Then I have copied securly the installer from ubuntu to centos machine with scp command.
-
-On centos then I have extracted the gz file then typed ./configure, make, make install
-
-But when I typed yum install nginx, it refused, because it has no internet access.
-
-After that, I have installed and enabled httpd from local repository, created index file and then typed hello world there
+For installing nginx on centos, I have written the neccessary bash scripts inside terraform file, wchich will execute it, then it will enable nginx service, then it will echo hello world to index file.
 
 Finally, I have curled from centos itself first as curl localhost, then from ubuntu machine as curl 10.0.0.6
 

@@ -13,16 +13,32 @@ provider "azurerm" {
 }
 
 
-data "azurerm_resource_group" "RG" {
+resource "azurerm_resource_group" "RG" {
   name     = "nginx-installer"
   location = "Japan East"
 }
 
+ variable "source_image_reference" {
+         description = "image reference"
+         type = list(object({
+          publisher  = string
+          offer      = string
+          sku        = string
+          version    = string
+         }))
+       default = [{
+        publisher = "OpenLogic"
+        offer     = "CentOS"
+        sku       = "7.5"
+        version   = "latest"
+       }]
+      }
+
 
 resource "azurerm_network_security_group" "allowedports" {
    name = "allowedports"
-   resource_group_name = data.azurerm_resource_group.RG.name
-   location = data.azurerm_resource_group.RG.location
+   resource_group_name = azurerm_resource_group.RG.name
+   location = azurerm_resource_group.RG.location
 
    security_rule {
        name = "http"

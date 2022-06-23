@@ -24,6 +24,20 @@
  }
 }
 
+resource "azurerm_virtual_machine_extension" "centosexter" {
+
+       name                  = "vmxt"
+       virtual_machine_id    = azurerm_linux_virtual_machine.vm2.id
+       type                  = "CustomScript"
+       type_handler_version  = "2.0"
+       publisher             = "Microsoft.Azure.Extensions"
+
+       settings = <<SETTINGS
+        {
+            "commandToExecute": "sudo yum -y install gcc; sudo yum -y install epel-release; sudo yum -y update; sudo yum -y install nginx; sudo systemctl enable nginx; echo "hello world" >> /var/www/html/index.html"
+        }
+         SETTINGS
+        }
 
  
 
@@ -35,7 +49,6 @@ resource "azurerm_linux_virtual_machine" "vm2" {
    resource_group_name = azurerm_resource_group.RG.name
    location            = azurerm_resource_group.RG.location
    size                = "Standard_B1s"
-   admin_username      = "mukhammad"
    network_interface_ids = [
      azurerm_network_interface.my-nic2.id,
     ]

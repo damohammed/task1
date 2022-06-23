@@ -5,7 +5,7 @@
 <h3><b>Task 1</b><h3>
 
 So I have created again new vm image with ubuntu and centos on azure
-
+I have made sure that centos has no access to internet by pinging on google.com
 <h3><b>Task 2</b><h3>
 
 I have written network security group settings for allowing 80, 22 and 443 ports for two virtual machines:

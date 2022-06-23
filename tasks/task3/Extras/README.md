@@ -6,7 +6,7 @@
 
 So I have created again new vm image with ubuntu and centos on azure
 
-I have added source image as variable inside variables.tf file
+I have added source image as variable inside main.tf file
 
 I have made sure that centos has no access to internet by pinging on google.com
 <h3><b>Task 2</b><h3>

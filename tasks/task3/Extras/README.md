@@ -16,7 +16,7 @@ I have written network security group settings for allowing 80, 22 and 443 ports
 
 <h3><b>Task 3</b></h3>
 
-For installing nginx on centos, I have written the neccessary bash scripts inside terraform file, wchich will execute it, then it will enable nginx service, then it will echo hello world to index file.
+For installing nginx on centos, I have written the neccessary bash script commands inside centos tf file, wchich will execute it, then it will enable nginx service, then it will echo hello world to index file.
 
 Finally, I have curled from centos itself first as curl localhost, then from ubuntu machine as curl 10.0.0.6
 

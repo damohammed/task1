@@ -1,30 +1,30 @@
- resource "azurerm_virtual_network" "vnet2" {
+ data "azurerm_virtual_network" "vnet2" {
    name                 = "my-network2"
    address_space        = ["10.0.0.0/16"]
-   location             = azurerm_resource_group.RG.location
-   resource_group_name  = azurerm_resource_group.RG.name
+   location             = data.azurerm_resource_group.RG.location
+   resource_group_name  = data.azurerm_resource_group.RG.name
 }
 
- resource "azurerm_subnet" "subnet2" {
+ data "azurerm_subnet" "subnet2" {
    name                 = "vmsubnet2"
-   resource_group_name  = azurerm_resource_group.RG.name
-   virtual_network_name = azurerm_virtual_network.vnet2.name
+   resource_group_name  = data.azurerm_resource_group.RG.name
+   virtual_network_name = data.azurerm_virtual_network.vnet2.name
    address_prefixes     = ["10.0.0.0/24"]
 }
 
  resource "azurerm_network_interface" "my-nic2" {
   name                  = "example-nic2"
-  location              = azurerm_resource_group.RG.location
-  resource_group_name   = azurerm_resource_group.RG.name
+  location              = data.azurerm_resource_group.RG.location
+  resource_group_name   = data.azurerm_resource_group.RG.name
  
  ip_configuration {
   name                          = "internal2"
-  subnet_id                     = azurerm_subnet.subnet2.id
+  subnet_id                     = data.azurerm_subnet.subnet2.id
   private_ip_address_allocation = "Dynamic"
  }
 }
 
-resource "azurerm_virtual_machine_extension" "centosexter" {
+data "azurerm_virtual_machine_extension" "centosexter" {
 
        name                  = "vmxt"
        virtual_machine_id    = azurerm_linux_virtual_machine.vm2.id
@@ -46,8 +46,8 @@ resource "azurerm_virtual_machine_extension" "centosexter" {
 
 resource "azurerm_linux_virtual_machine" "vm2" {
    name                = "TFVM2"
-   resource_group_name = azurerm_resource_group.RG.name
-   location            = azurerm_resource_group.RG.location
+   resource_group_name = data.azurerm_resource_group.RG.name
+   location            = data.azurerm_resource_group.RG.location
    size                = "Standard_B1s"
    network_interface_ids = [
      azurerm_network_interface.my-nic2.id,

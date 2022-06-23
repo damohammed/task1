@@ -50,10 +50,4 @@ resource "azurerm_linux_virtual_machine" "vm2" {
       caching              = "ReadWrite"
       storage_account_type = "Standard_LRS"
     }
-    source_image_reference {
-      publisher = "OpenLogic"
-      offer     = "CentOS"
-      sku       = "7.5"
-      version   = "latest"
-    }
-  }
+   }

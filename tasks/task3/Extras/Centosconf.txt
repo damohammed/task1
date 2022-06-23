@@ -1,0 +1,13 @@
+For installing nginx on centos, I have written script commands to centos installer terraform file.
+
+ firstly I installed a repository which has nginx, then I installed gcc 
+
+After that I have updated centos repository with:
+ sudo yum update
+
+and then it had got nginx on its repository
+So after that I installed nginx with:
+Sudo yum install nginx
+
+Then I printed hello world to index file with redirecting:
+echo "hello world" >> /var/www/html/index.html

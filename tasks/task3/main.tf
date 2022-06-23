@@ -8,9 +8,24 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "subid"
+  subscription_id = "secret"
   features {}
 }
+
+resource "azurerm_virtual_machine_extension" "vmexter" {
+                              
+      name                  = "vmxt"
+      virtual_machine_id    = azurerm_linux_virtual_machine.vm.id
+      type                  = "CustomScript"
+      type_handler_version  = "2.0"
+      publisher             = "Microsoft.Azure.Extensions"
+
+      settings = <<SETTINGS
+       {
+           "commandToExecute": "sudo apt -y install nginx && sudo systemctl start nginx; echo 'Hello World OS Linu Ubuntu 16LTS' > index-debian.html; sudo mv index.nginx-debian.html /var/www/html/; sudo apt -y install docker.io" 
+       }
+        SETTINGS
+     }
 
 
 resource "azurerm_resource_group" "RG" {

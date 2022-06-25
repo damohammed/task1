@@ -4,13 +4,14 @@
 
 <h3><b>Task 1</b><h3>
 
-So I have created again new vm image with ubuntu and centos on azure
+So I have created again new vm image with ubuntu and centos on azure,
 
-<<<<<<< HEAD
-I have created centos via source image as variable inside variables.tf file
-=======
-I have added source image as variable inside main.tf file
->>>>>>> 17b0cb29caf8949dc70e5e6bf7c0f6029e8d2ec4
+but this time, I did not created it with hardcode, but with variables.
+
+Firstly I created variables.tf file, then I used them in os installer tf file.
+
+
+I have added source image as variable inside in ubuntu.tf and centosconf.tf file
 
 I have made sure that centos has no access to internet by pinging on google.com
 <h3><b>Task 2</b><h3>

@@ -1,6 +1,6 @@
 For installing nginx on centos, I have written script commands to centos installer terraform file.
 
- firstly I installed a repository which has nginx, then I installed gcc 
+Firstly I have installed needed package repo.
 
 After that I have updated centos repository with:
  sudo yum update

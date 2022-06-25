@@ -45,15 +45,15 @@ resource "azurerm_linux_virtual_machine" "vm" {
   location            = azurerm_resource_group.RG.location
   size                = "Standard_B1s"
   admin_username      = "mukhammad"
+  disable_password_authentication = true
   network_interface_ids = [
     azurerm_network_interface.my-nic.id,
                           ]
-
   admin_ssh_key {
     username   = "mukhammad"
     public_key = file("~/.ssh/id_rsa.pub")
                 }
-
+ 
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"

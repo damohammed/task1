@@ -31,16 +31,21 @@
 #vm
 
 resource "azurerm_linux_virtual_machine" "vm2" {
-   name                = "TFVM2"
-   resource_group_name = azurerm_resource_group.RG.name
-   location            = azurerm_resource_group.RG.location
-   size                = "Standard_B1s"
-   admin_username            = "secret"
-   admin_password            = "secret"
+   name                            = "TFVM2"
+   resource_group_name             = azurerm_resource_group.RG.name
+   location                        = azurerm_resource_group.RG.location
+   size                            = "Standard_B1s"
+   admin_username                  = "secret"
+   admin_password                  = "secret"
+   disable_password_authentication = false
    network_interface_ids = [
      azurerm_network_interface.my-nic2.id,
     ]
-    
+
+    admin_ssh_key {
+    username   = "secret"
+    public_key = file("~/.ssh/canon.pub")
+                  }
        
     os_disk {
       caching              = "ReadWrite"

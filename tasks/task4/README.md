@@ -63,3 +63,19 @@ Docker build ./
 Then it created a new image with new id
 
 Then I have typed docker's ip address on browser, then it showed me the welcome page of nginx.
+
+
+<h1><b>TASK 4</b></h1>
+
+For this, firstly I have created a new docker hub account.
+
+Then I have commited my docker container id with new image id name with tag
+
+Then I have loged in from my local docker
+
+After that I have specified the location of where to push with docker tag option
+
+Then finally I have pushed it by docker push Dockerid/repo
+
+Here is the link for my docker image:
+https://hub.docker.com/layers/243830675/mukhammad9801/mydockerrepo1/latest/images/sha256-3acb3261c75dc4e8435018cfa6223fad680f846312426c2245dc4c4a1169c6b1?context=repo

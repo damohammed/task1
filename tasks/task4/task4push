@@ -1,0 +1,13 @@
+container_id: myid
+
+docker commit myid nginxinstalled/test-image-321:2
+
+docker login
+
+docker tag nginxinstalled/test-image-321:2 mukhammad9801/mydockerrepo1
+
+docker push mukhammad9801/mydockerrepo1
+
+#link:
+https://hub.docker.com/layers/243830675/mukhammad9801/mydockerrepo1/latest/images/sha256-3acb3261c75dc4e8435018cfa6223fad680f846312426c2245dc4c4a1169c6b1?context=repo
+

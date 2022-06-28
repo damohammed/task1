@@ -28,7 +28,7 @@ sudo apt-get update;
 sudo apt-get install docker-ce
 #here I am giving a command to install docker community eddition
 
-<h1><b>TASK2</b></h1>
+<h1><b>TASK 2</b></h1>
 
 So, for downloading and running docker container hello world, there is such image in official docker hub.
 First we should make sure that docker daemon is running then we can run:
@@ -40,3 +40,26 @@ After this, it will download and run hello-world container's output.
 If we want to just pull it and not run we can write:
 
 docker pull hello-world
+
+<h1><b>TASK 3</b></h1>
+As you know, we can create simple docker images which has pre installed services by our own wih docker files. So in our example, I have written some few commands to install them:
+
+It begins with choosing the ubuntu distro
+
+Then I am specifying the maintainer by giving it my own email
+
+Then I have given bash scripts for updating and upgrading the repo
+
+Then I have given a command to install nginx, apache2 and httpd services.
+
+Then I am exposing the port 80, which is the port of http
+
+The last lines of codes are the ones which actually starts the nginx or apache2.
+
+After that, I typed a command as:
+
+Docker build ./
+
+Then it created a new image with new id
+
+Then I have typed docker's ip address on browser, then it showed me the welcome page of nginx.

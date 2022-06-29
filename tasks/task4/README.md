@@ -102,6 +102,13 @@ For this task, I am firstly mentioning the version in docker-compose file, other
 Then every image starts from services: point, so thats why there are three services.
 
 <b>I added the function scale:5 for making 5 nodes</b>
+<b>Output:</b>
+id   mukhammad9801/mydockerrepo1:latest   "sh"                     3 minutes ago    Restarting (0) 35 seconds ago                                tttt_os_2
+id   mukhammad9801/mydockerrepo1:latest   "sh"                     3 minutes ago    Restarting (0) 38 seconds ago                                tttt_os_3
+id   mukhammad9801/mydockerrepo1:latest   "sh"                     3 minutes ago    Restarting (0) 40 seconds ago                                tttt_os_5
+id   mukhammad9801/mydockerrepo1:latest   "sh"                     3 minutes ago    Restarting (0) 37 seconds ago                                tttt_os_4
+id   mukhammad9801/mydockerrepo1:latest   "sh"                     4 minutes ago    Restarting (0) About a minute ago                            tttt_os_1
+
 
 At first, I am mentioning it as os then my docker image repo name from dockerhub.
 

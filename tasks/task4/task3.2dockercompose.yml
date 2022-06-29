@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: "mukhammad9801/mydockerrepo1:latest"
+    environment:
+     - DEVOPS=mukhammadamin9801

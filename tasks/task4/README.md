@@ -13,20 +13,19 @@ so bash script for installing docker in debian is as follows:
 sudo apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common;
 #here I am installing all neccesarry tools for performing this task
 
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -;
-#here I am downloading docker's community edition repository for debian
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+#here I am downloading docker's community edition repository for ubuntu
 
-sudo apt-key fingerprint 0EBFCD88;
-#here I am adding the fingerprint of this repo, otherwise it will show error becauser of public key non existence
-
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable";
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
 #here I am specifying that it is speciaaly for deb distribution with amd64(x86_64) architecture, stable version
 
 sudo apt-get update;
 #here I am updating the repo
 
-sudo apt-get install docker-ce
-#here I am giving a command to install docker community eddition
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+#here I am giving a command to install docker community eddition, cli container and composer
 
 <h1><b>TASK 2</b></h1>
 
@@ -41,7 +40,7 @@ If we want to just pull it and not run we can write:
 
 docker pull hello-world
 
-<h1><b>TASK 3</b></h1>
+<h1><b>TASK 3.1</b></h1>
 As you know, we can create simple docker images which has pre installed services by our own wih docker files. So in our example, I have written some few commands to install them:
 
 It begins with choosing the ubuntu distro
@@ -63,6 +62,21 @@ Docker build ./
 Then it created a new image with new id
 
 Then I have typed docker's ip address on browser, then it showed me the welcome page of nginx.
+
+<h1><b>TASK 3.2</b></h1>
+
+I have created a docker-compose file in order to create a new variable DEVOPS with my username
+
+So there I am specifying my image with tag, that I have built previously, and then I am giving it a new environment DEVOPS=mukhammadamin9801
+
+Then I ran docker-compose up, it created env.
+
+Then I typed:
+<b>docker exec <container_id> bash -c 'echo "$DEVOPS"'</b>
+
+output:
+
+<b>mukhammadamin9801</b>
 
 
 <h1><b>TASK 4</b></h1>

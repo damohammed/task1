@@ -4,15 +4,14 @@ services:
   os:
     image: mukhammad9801/mydockerrepo1:latest
     restart: always
-
+  java:
+    image: openjdk:7
+    depends_on:
+      - "db"
+    working_dir: /home/mukhammadamin/tttt/hello.java
   db:
     image: postgres    
     restart: always
     environment:
      POSTGRES_PASSWORD: secret
-
-  java:
-    image: openjdk:7
-    working_dir: /home/mukhammadamin/tttt/hello.java
-    
-
+ 

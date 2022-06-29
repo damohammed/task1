@@ -101,6 +101,8 @@ For this task, I am firstly mentioning the version in docker-compose file, other
 
 Then every image starts from services: point, so thats why there are three services.
 
+<b>I have commited some new containers like ssh container, mysql container and apache2 container to my image, then I pushed them to dockerhub again,</b>
+
 At first, I am mentioning it as os then my docker image repo name from dockerhub.
 
 Then for second service, I am requiring to run openjdk:7 (java) image, then I am mentioning my java file path and then the command to run it.

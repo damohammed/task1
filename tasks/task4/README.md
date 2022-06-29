@@ -101,7 +101,7 @@ For this task, I am firstly mentioning the version in docker-compose file, other
 
 Then every image starts from services: point, so thats why there are three services.
 
-<b>I have commited some new containers like ssh container, mysql container and apache2 container to my image, then I pushed them to dockerhub again,</b>
+<b>I added the function scale:5 for making 5 nodes</b>
 
 At first, I am mentioning it as os then my docker image repo name from dockerhub.
 

@@ -1,9 +1,10 @@
-version: '3.3'
+version: '2.2'
 
 services:
   os:
-    image: mukhammad9801/mydockerrepo1:latest
+    image: mukhammad9801/mydockerrepo1:latest 
     restart: always
+    scale: 5
   java:
     image: openjdk:7
     depends_on:
@@ -14,4 +15,5 @@ services:
     restart: always
     environment:
      POSTGRES_PASSWORD: secret
- 
+
+

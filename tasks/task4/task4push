@@ -1,6 +1,10 @@
 container_id: myid
 
 docker commit myid nginxinstalled/test-image-321:2
+docker commit myid2 nginxinstalled/test-image-321:2
+docker commit myid3 nginxinstalled/test-image-321:2
+docker commit myid4 nginxinstalled/test-image-321:2
+docker commit myid5 nginxinstalled/test-image-321:2
 
 docker login
 

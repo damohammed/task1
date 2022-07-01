@@ -1,0 +1,11 @@
+---
+- name: pip2 installer
+  hosts: ansible_client
+  remote_user: mukhammad
+  become: true
+  tasks:
+    - name: install pip2
+      apt:
+          name: pip2
+          state: latest
+...

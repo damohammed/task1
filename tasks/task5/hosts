@@ -1,0 +1,3 @@
+[ansible_client]
+10.0.0.5 ansible_ssh_user=user ansible_ssh_pass=secret
+10.0.0.6 ansible_ssh_user=user ansible_ssh_pass=secret

@@ -1,0 +1,18 @@
+---
+- name: docker installer
+  hosts: ansible_client
+  remote_user: mukhammad
+  become: true
+  tasks:
+    - name: install docker
+      apt:
+          name: docker.io
+          state: latest
+    - name: run docker
+      service:
+              name: docker
+              state: started
+    - name: create confirmer
+      copy:
+           content: "Congratulations on installing docker"
+           dest: /home/user/confirmed.txt

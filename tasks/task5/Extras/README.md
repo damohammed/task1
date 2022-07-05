@@ -22,4 +22,12 @@ I have not given any credentials, because I used ssh keys.
 
 <h1>TASK 3</h1>
 
+For task 3, I have created httpd yaml files by typing ansible-galaxy init httpd --offline
+
+Then I have mentioned tasks/main.yml file which installs httpd and copies the index.html file from the host to target
+
+Then, inside var/main.yml I have mentioned the destionation of where to copy the index file
+
+Then inside files/main.yml file, I have created the index.html file which is the copying file
+
 <hr>

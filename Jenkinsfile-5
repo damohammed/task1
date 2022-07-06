@@ -1,13 +1,14 @@
-pipeline {  
-    docker { 
-    agent {'nice_tharp' }
-  
-   stages {
-    stage('jenkins master') {
-      steps {
-        sh 'docker ps -a'
-      }
-    }
+pipeline {
+   docker { 
+      agent { 'nice_tharp' 
+    args '-u root:sudo' } 
   }
- }
-}
+  stages { 
+    stage('ps')  { 
+      steps {
+        sh ''' 
+        docker ps -a
+        ''' } 
+           } 
+         }
+       }

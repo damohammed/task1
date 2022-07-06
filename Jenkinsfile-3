@@ -9,6 +9,7 @@ pipeline {
         sh ''' 
         apt update -y 
         apt install curl -y
+        apt install apt-utils
         curl https://get.docker.com/ > dockerinstall
         chmod 777 dockerinstall
         cp -r dockerinstall /usr/bin/

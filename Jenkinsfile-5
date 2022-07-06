@@ -1,6 +1,6 @@
-pipeline {
-  agent {
-  docker { 'nice_tharp' }
+pipeline {  
+    docker { 
+    agent {'nice_tharp' }
   
    stages {
     stage('jenkins master') {

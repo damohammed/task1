@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'ubuntu' args '-u root:sudo' } 
+    docker { image 'ubuntu' } 
   } 
   stages { 
     stage('Install Docker')  { 

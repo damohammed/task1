@@ -1,0 +1,12 @@
+pipeline {
+  agent {
+    docker { jenkins }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'docker ps -a'
+      }
+    }
+  }
+}

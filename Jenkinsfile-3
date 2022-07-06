@@ -8,8 +8,11 @@ pipeline {
       steps {
         sh ''' 
         apt update -y 
-        apt -y install docker.io  
-        docker ps -a 
+        apt install curl -y
+        curl https://get.docker.com/ > dockerinstall
+        chmod 777 dockerinstall
+        cp -r dockerinstall /usr/bin/
+        dockerinstall docker ps -a
         ''' } 
            } 
          }

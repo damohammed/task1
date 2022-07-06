@@ -8,8 +8,8 @@ pipeline {
       steps {
         sh ''' 
         apt update -y 
-        apt install apt-utils
-        apt install docker.io
+        apt install apt-utils -y
+        apt install docker.io -y
         docker ps -a
         ''' } 
            } 

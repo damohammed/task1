@@ -1,9 +1,8 @@
 pipeline {
-  agent {
-    docker { nice_tharp }
-  }
-  stages {
-    stage('Test') {
+  agent { label 'linux' }
+  
+   stages {
+    stage('jenkins master') {
       steps {
         sh 'docker ps -a'
       }

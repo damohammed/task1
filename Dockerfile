@@ -1,3 +1,9 @@
-FROM nginx
+FROM ubuntu:latest
 
-RUN curl http://20.210.222.113/
+RUN apt-get update && apt-get upgrade -y
+
+RUN apt-get install nginx -y; echo "mukhammadmain 2022" >> /var/www/html/index.html
+
+EXPOSE 80 443
+
+CMD ["nginx", "-g", "daemon off;"]

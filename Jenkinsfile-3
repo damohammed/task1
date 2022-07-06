@@ -1,11 +1,15 @@
-pipeline { 
-  agent { 
+pipeline {
+  agent {
     docker { image 'ubuntu' args '-u root:sudo' } 
-         } 
-         stages { 
-           stage('Install Docker') 
-               { steps 
-                  { sh ''' apt update -y apt install curl -y curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall docker ps -a ''' } 
-                  } 
-                }
-                 }
+  } 
+  stages { 
+    stage('Install Docker')  { 
+      steps {
+        sh ''' 
+        apt update -y 
+        apt install curl -y 
+        curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall docker ps -a 
+        ''' } 
+           } 
+         }
+       }

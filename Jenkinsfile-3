@@ -4,9 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          nginx -v
-          git --version
-          curl --version
+        docker ps -a
         '''
       }
     }

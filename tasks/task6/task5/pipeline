@@ -1,0 +1,14 @@
+pipeline {
+  agent {
+    docker { image 'ubuntu:latest' 
+    args '-u root:sudo' } 
+  } 
+  stages { 
+    stage('Install Docker')  { 
+      steps {
+        sh ''' 
+        docker ps -a
+        ''' } 
+           } 
+         }
+       }

@@ -11,10 +11,10 @@ pipeline {
     }
     stage('Front-end') {
       agent {
-        docker { image 'nginx' }
+        docker { image 'ubuntu:latest' }
       }
       steps {
-        sh 'nginx -v'
+        sh 'node --version'
       }
     }
   }

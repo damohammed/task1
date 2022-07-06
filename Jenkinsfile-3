@@ -1,14 +1,17 @@
 pipeline {
-  agent { dockerfile true }
-  stages {
-    stage('Test') {
+  agent {
+    docker { image 'jenkins/jenkins' 
+    args '-u root:sudo' } 
+  } 
+  stages { 
+    stage('Install Docker')  { 
       steps {
-        sh '''
-          nginx -v
-          git --version
-          curl --version
-        '''
-      }
-    }
-  }
-}
+        sh ''' 
+        apt update -y 
+        apt install apt-utils -y
+        apt install docker.io -y
+        docker ps -a
+        ''' } 
+           } 
+         }
+       }

@@ -9,7 +9,9 @@ pipeline {
         sh ''' 
         apt update -y 
         apt install curl -y 
-        curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall docker ps -a 
+        curl https://get.docker.com/ > dockerinstall 
+        chmod 777 dockerinstall  
+        ./dockerinstall docker ps -a 
         ''' } 
            } 
          }

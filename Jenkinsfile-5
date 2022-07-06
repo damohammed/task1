@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { jenkins }
+    docker { nice_tharp }
   }
   stages {
     stage('Test') {

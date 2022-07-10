@@ -47,6 +47,8 @@ I can also see the active and passive loads from cpu user time widget, as you ca
 
 <h1>TASK 5</h1>
 
+For making ICMP ping, i have created new host, with google host name, with google dns, then I made it in ICMP ping template, after that, inside lates data, I tapped on Google, then I tapped on Googel icmp ping, as you can see in a diagram, it is starting and getting changes
+
 <h1>TASK 6</h1>
 
 <h1>TASK 7</h1>

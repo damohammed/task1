@@ -51,7 +51,15 @@ For making ICMP ping, i have created new host, with google host name, with googl
 
 <h1>TASK 6</h1>
 
+For creating a maintenance instruction, I firstly tapped on Configuration>Maintenance and then create new one
+
+Then I setted the period time, since when till when and host group with hostname
+
 <h1>TASK 7</h1>
+
+For creating dashboard of monitoring hosts, at first I have created discovery rules, Then I chose what type of templates to check, 255 range of ip.
+
+Then inside Dashboard section, I added new widget of Discovery rules and I chose the one I named (local_network)
 
 <hr>
 

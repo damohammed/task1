@@ -45,8 +45,9 @@ I have uploaded the command and results to this repo.
 
 I can also see the active and passive loads from cpu user time widget, as you can see there, the lines which are going up are passive checks and the ones that are in straight line are active checks
 
-<h1>TASK 6</h1>
+<h1>TASK 5</h1>
 
+<h1>TASK 6</h1>
 
 <h1>TASK 7</h1>
 

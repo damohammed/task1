@@ -57,9 +57,11 @@ Then I setted the period time, since when till when and host group with hostname
 
 <h1>TASK 7</h1>
 
-For creating dashboard of monitoring hosts, at first I have created discovery rules, Then I chose what type of templates to check, 255 range of ip.
+For creating dashboard of monitoring hosts, at first I have created new map, and I drawed some devices like my host, webserver, another host and etc
 
-Then inside Dashboard section, I added new widget of Discovery rules and I chose the one I named (local_network)
+Then I made a link between different hosts, and typed some labels which will display cpu load, problems with device and etc.
+
+Then I created a dashboard and created new Map widget and added my new created map
 
 <hr>
 

@@ -1,6 +1,6 @@
 filebeat.inputs:
 - type: container
-  paths: 
+  paths:
     - '/var/lib/docker/containers/*/*.log'
 
 processors:
@@ -13,7 +13,7 @@ processors:
     overwrite_keys: true
 
 output.elasticsearch:
-  hosts: ["localhost:9200"]
+  hosts: ["10.3.0.7:9200"]
   indices:
     - index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
 

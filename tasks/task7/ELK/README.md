@@ -8,7 +8,13 @@ I used docker compose for installing them, then I enabled the ports of all elk l
 
 <h1>TASK 2</h1>
 
-In order to get logs from docker I used the special dpkg application that integrartes with docker and shows all dockers statistics, I have also uncommented some settings inside docker settings, all of them are written in commands txt file
+In order to get logs from docker I created docker compose file, which installs kibana and elasticsearch and filebeat containers, then I also created filebeat.yml, which compose file fetches from it, and filebeat.yml file fetches from my dockers log.
+
+then I runned the command; docker-compose up -d (detatched mode)
+
+Then it ran 3 containers, I entered there on my browser, then I tapped on index pattern, create new index pattern, then I searched filebeat and it found a match, then I gave it name and created it
+
+After that, I tapped on discover section, and tapped the filter the one I created, then it displayed all docker logs
 
 <h1>TASK 3</h1>
 
